@@ -4,9 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite Song Showcase</title>
+    <style>
+      body {
+          background-color: rgba(117, 218, 231, 0.541);
+      }
+      #displayArea {
+          display: none;
+      }
+      #formarea {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 70%;
+          height: 100%;
+         margin-top: 15%;
+          
+      }
+      #form{
+        
+        width: 10%;
+        height: 10%;
+        border-radius: 10px;
+      }
+      </style>
   </head>
 
   <body>
+    <div id="formarea">
+      <form id="form">
+          <label for="songName">Song Name:</label><br>
+          <input type="text" id="songName" name="songName"><br>
+  
+          <label for="youtubeLink">YouTube Link:</label><br>
+          <input type="text" id="youtubeLink" name="youtubeLink"><br>
+  
+          <label for="description">Description:</label><br>
+          <textarea id="description" name="description"></textarea><br>
+  
+          <label for="year">Year:</label><br>
+          <input type="number" id="year" name="year"><br>
+  
+          <input type="button" value="Submit" onclick="displaySongInfo()">
+      </form>
+  </div>
+  
+  <div id="displayArea">
+      
+  </div>
     <script src="index.js"></script>
   </body>
 </html>
